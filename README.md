@@ -80,3 +80,15 @@ Configure an S3 Event Notification on your bucket to trigger the Lambda function
 -   **Logs**: Check CloudWatch Logs for the Lambda function if the email is not received.
 -   **Textract Limits**: Ensure the image format and size are supported by Amazon Textract.
 -   **Permissions**: Verify IAM roles if you see "Access Denied" errors in logs.
+
+## Future Improvements
+
+Potential enhancements for the system include:
+
+1.  **Web Interface**: Create a simple S3-hosted HTML/JS page for uploading receipts directly to the bucket.
+2.  **Expense Categorization**: Add logic to classify expenses (e.g., "Food", "Travel", "Office Supplies") and store them in DynamoDB.
+3.  **Monthly Reporting**: Implement a Lambda function to aggregate expenses and send a monthly summary via email.
+4.  **Image Optimization**: Compress receipt images before storage to save on S3 costs.
+5.  **Error Notifications**: key failure metrics to SNS for real-time error alerts.
+6.  **Status Tracking**: Add status fields (Processed, Pending, Rejected) to DynamoDB for better receipt lifecycle management.
+7.  **Authentication**: Secure the upload process using Amazon Cognito to control access.
